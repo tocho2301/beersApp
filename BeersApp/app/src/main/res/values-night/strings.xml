@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="first_brewed_date_title">Primera elaboracion:</string>
+    <string name="description_title">Descripcion del producto:</string>
+    <string name="food_pairing_title">Acompañala con:</string>
+</resources>

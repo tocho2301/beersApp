@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="beer"
+            type="com.example.beersapp.entity.beer.Beer" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".2"/>
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/verticalGuide"
+            image="@{beer.image}"/>
+
+        <TextView
+            android:id="@+id/tvBeerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/verticalGuide"
+            tools:text="BeerName"
+            android:text="@{beer.name}"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/tvBeerTagline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/verticalGuide"
+            app:layout_constraintTop_toBottomOf="@id/tvBeerName"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="super cerveza de prueba para llenar el layout"
+            android:text="@{beer.tagline}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
